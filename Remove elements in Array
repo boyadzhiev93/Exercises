@@ -1,0 +1,20 @@
+//function that removes all elements with a given value.....
+function arr(arrInput, b){
+  var arrObj = {
+      'arrForObj': arrInput,
+      'remove': function(forDel) {
+        var newArr = [];
+        var lenArr = this.arrForObj.length;
+        for (var i = 0; i < lenArr; i++) {
+          var item = this.arrForObj[i];
+          if (forDel !== item) {
+            newArr.push(item);
+          }
+        }
+       console.log(newArr);
+      }
+  }
+  arrObj.remove(b);
+}
+//test with array
+arr([ '1', '2', '3', '2', '1', '2', '3', '2' ], '1');
