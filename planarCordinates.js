@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
     function planarCordinates(arr){
       var objLen = {
         lenOne: [''],
@@ -68,6 +61,4 @@
       '5', '6', '2', '2',
       '95', '-14.5', '0', '-0.123'
     ]);
-    </script>
-  </body>
-</html>
+
