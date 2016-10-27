@@ -1,0 +1,14 @@
+
+// function that checks if a given object contains a given property
+function hasProparty(obj, callback){
+  if (typeof obj === 'object') {
+      var result = Object.getOwnPropertyNames(obj);
+      var len = result.length;
+      if (len > 0) {
+        console.log('Has ' + len + ' proparty')
+      } else {
+        console.log('Has not proparty');
+      }
+    }
+  }
+hasProparty({firstname: 'Gosho', lastname: 'Gosho', age: 22 });
