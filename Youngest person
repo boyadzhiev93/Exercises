@@ -1,0 +1,33 @@
+//Youngest person
+function arr(arrObj){
+  var firstname, lastname, age, people = [], minAge = 120, youngestPerson;
+  for (var i = 0; i < arrObj.length; i += 3) {
+    firstname = arrObj[i];
+    lastname = arrObj[i + 1];
+    age = arrObj[i + 2];
+    var onePeople = {
+      firstname: firstname,
+      lastname: lastname,
+      age: age
+    };
+    people.push(onePeople);
+  }
+  for (var i = 0; i < people.length; i++) {
+    for(var key in people[i]);{
+      if (people[i].hasOwnProperty(key)) {
+        if (minAge > people[i][key]) {
+          youngestPerson = people[i]['firstname'] + ' ' + people[i]['lastname'];
+          minAge = people[i][key];
+        }
+      }
+    }
+  }
+console.log(youngestPerson + ' ' + minAge);
+}
+//Test with Array
+arr([
+  'Penka', 'Hristova', '61',
+    'System', 'Failiure', '88',
+    'Bat', 'Man', '16',
+    'Malko', 'Kote', '72'
+]);
