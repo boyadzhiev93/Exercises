@@ -1,0 +1,27 @@
+//I creat method on Array
+String.prototype.removeHtmlTags = function(){
+var finalyString ='', newStr = "" + this;
+for (var i = 0; i < this.length; i++) {
+var element = this;
+if (element === "<") {
+var word = '';
+for (var j = i; j < this.length; j++) {
+var endElement = this[j];
+word += this[j];
+if (endElement === ">") {
+j = this.length + 1;
+}
+}
+if (word === '') {
+
+}
+var re = new RegExp(word, 'g');
+newStr = newStr.replace(re, " ");
+}
+}
+console.log(newStr);
+}
+
+//It is string for for demo
+var str = 'We are <orgcase>liViNg</orgcase> in a <upcase>yellow submarine</upcase>. We <orgcase>doN\'t</orgcase> have <lowcase>anything</lowcase> else.'
+str.removeHtmlTags();
